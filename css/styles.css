@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 14px;
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.icon {
+  background-image: url(../images/icon-cart.svg);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.card-wrap {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px -14px black;
+}
+
+.card {
+  height: auto;
+  display: grid;
+  grid-template-columns: 300px 300px;
+}
+@media only screen and (max-width: 650px) {
+  body {
+    padding: 0px 10px;
+  }
+  .card {
+    grid-template-rows: 37vh 53vh;
+    grid-template-columns: auto;
+  }
+}
+@media only screen and (max-width: 300px){
+    .card {
+        grid-template-rows: 25vh 65vh;
+        grid-template-columns: auto;
+      }
+}
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.right {
+  padding: 2rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right span {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--dark-grayish-blue);
+}
+
+.right h1 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--very-dark-blue);
+}
+
+.right p {
+  color: var(--dark-grayish-blue);
+  line-height: 1.5rem;
+}
+
+.right .prices {
+  display: flex;
+  align-items: center;
+}
+.right .prices span {
+  margin-right: 1.5rem;
+  color: var(--dark-cyan);
+  font-size: 2rem;
+  letter-spacing: normal;
+  font-weight: bold;
+  font-family: "Fraunces", serif;
+}
+
+.right .prices p {
+  text-decoration: line-through;
+}
+
+.right button {
+  background-color: var(--dark-cyan);
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.right button:hover{
+ background-color: rgb(0, 46, 46);
+}
+
+button .cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-button p {
+  color: white;
+  font-weight: 700;
+  margin-left: 10px;
+}
